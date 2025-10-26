@@ -6,15 +6,27 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "check-types": "turbo run check-types",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepare": "husky"
   },
   "devDependencies": {
-    "prettier": "^3.6.0",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.6.11",
-    "turbo": "^2.5.8"
+    "turbo": "^2.5.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.6"
   },
   "packageManager": "pnpm@10.19.0",
   "engines": {
-    "node": ">=18"
+    "node": ">=23"
+  },
+  "lint-staged": {
+    "apps/**/*.{js,jsx,ts,tsx}": [
+      "cd apps/fe && eslint "
+    ],
+    "**/*.{json,md,yaml,yml}": [
+      "prettier --write"
+    ]
   }
 }

@@ -1,6 +1,6 @@
 import { Geist } from 'next/font/google';
 
-import '@tnt/ui/styles.css';
+import '@repo/ui/styles.css';
 import type { Metadata } from 'next';
 
 import './globals.css';

@@ -1,5 +1,6 @@
 {
-  "name": "with-tailwind",
+  "name": "flowcraft",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "build": "turbo run build",
@@ -9,6 +10,15 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "husky"
   },
+  "authors": [
+    "00tnt",
+    "gin",
+    "shin",
+    "ned",
+    "Huynh Nguyen Tan Nhac",
+    "Dang Van Thong",
+    "Pham Van Thuan"
+  ],
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "prettier": "^3.6.2",
@@ -23,7 +33,7 @@
   },
   "lint-staged": {
     "apps/**/*.{js,jsx,ts,tsx}": [
-      "cd apps/fe && eslint "
+      "cd apps/fe && eslint"
     ],
     "**/*.{json,md,yaml,yml}": [
       "prettier --write"

@@ -5,22 +5,40 @@
   "main": "./dist/main.js",
   "type": "module",
   "scripts": {
-    "dev": "node --watch src/main.ts",
-    "build": "tsc"
+    "dev": "dotenv -e .env.local tsx watch src/main.ts",
+    "build": "pkgroll --minify",
+    "start": "dotenv -e .env.prod -- node ./dist/main.js",
+    "start:dev": "dotenv -e .env.dev -- node ./dist/main.js"
   },
   "keywords": [
     "flowcraft"
   ],
-  "author": "00tnt",
+  "authors": [
+    "00tnt",
+    "gin",
+    "shin",
+    "ned",
+    "Huynh Nguyen Tan Nhac",
+    "Dang Van Thong",
+    "Pham Van Thuan"
+  ],
   "license": "ISC",
   "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "dotenv-cli": "^10.0.0",
     "express": "^5.1.0",
     "inversify": "^7.10.4",
     "reflect-metadata": "^0.2.2"
   },
   "devDependencies": {
+    "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.5",
-    "@types/node": "^22.15.30"
+    "@types/node": "^22.15.30",
+    "pkgroll": "^2.20.1",
+    "tsx": "^4.20.6"
   },
   "packageManager": "pnpm@10.19.0"
 }

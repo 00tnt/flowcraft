@@ -3,12 +3,17 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "init-submodules": "./init-submodules.sh",
+    "install-fe": "pnpm install",
+    "install:fe": "turbo run install-fe",
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "check-types": "turbo run check-types",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "prepare": "husky"
+    "prepare": "husky",
+    "pages:build": "turbo run pages:build",
+    "preview": "turbo run preview"
   },
   "authors": [
     "00tnt",
@@ -30,13 +35,5 @@
   "packageManager": "pnpm@10.19.0",
   "engines": {
     "node": ">=23"
-  },
-  "lint-staged": {
-    "apps/**/*.{js,jsx,ts,tsx}": [
-      "cd apps/fe && eslint"
-    ],
-    "**/*.{json,md,yaml,yml}": [
-      "prettier --write"
-    ]
   }
 }

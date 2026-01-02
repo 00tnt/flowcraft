@@ -16,6 +16,23 @@
     "dev": {
       "cache": false,
       "persistent": true
+    },
+
+    "//#init-submodules": {
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": ["be/*"]
+    },
+
+    "//#install-fe": {
+      "dependsOn": ["init-submodules"]
+    },
+
+    "pages:build": {
+      "dependsOn": ["^pages:build"]
+    },
+
+    "preview": {
+      "dependsOn": ["^preview"]
     }
   }
 }

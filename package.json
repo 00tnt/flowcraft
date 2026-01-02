@@ -11,7 +11,8 @@
     "check-types": "turbo run check-types",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "husky",
-    "pages:build": "turbo run pages:build"
+    "pages:build": "turbo run pages:build",
+    "preview": "turbo run preview"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",

@@ -29,6 +29,10 @@
 
     "pages:build": {
       "dependsOn": ["^pages:build"]
+    },
+
+    "preview": {
+      "dependsOn": ["^preview"]
     }
   }
 }

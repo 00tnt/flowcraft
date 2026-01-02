@@ -25,6 +25,10 @@
 
     "//#install-fe": {
       "dependsOn": ["init-submodules"]
+    },
+
+    "pages:build": {
+      "dependsOn": ["^pages:build"]
     }
   }
 }

@@ -2,6 +2,9 @@
   "name": "with-tailwind",
   "private": true,
   "scripts": {
+    "init-submodules": "./init-submodules.sh",
+    "install-fe": "pnpm install",
+    "install:fe": "turbo run install-fe",
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
@@ -20,13 +23,5 @@
   "packageManager": "pnpm@10.19.0",
   "engines": {
     "node": ">=23"
-  },
-  "lint-staged": {
-    "apps/**/*.{js,jsx,ts,tsx}": [
-      "cd apps/fe && eslint "
-    ],
-    "**/*.{json,md,yaml,yml}": [
-      "prettier --write"
-    ]
   }
 }

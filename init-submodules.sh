@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # you can load the .env into this bash
-source .env
+#source .env
 
 # github access token is necessary
 # add it to Environment Variables on Vercel

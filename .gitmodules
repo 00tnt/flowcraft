@@ -1,4 +1,4 @@
 [submodule "apps/be"]
 	path = apps/be
-	url = https://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@github.com/00tnt/flowcraft-be.git
-	branch = develop
+	url = git@github.com:00tnt/flowcraft-be.git
+  branch = develop

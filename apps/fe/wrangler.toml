@@ -1,7 +1,7 @@
 name = "flowcraft"
 compatibility_date = "2026-01-02"
 compatibility_flags = ["nodejs_compat"]
-pages_build_output_dir = "apps/fe/.vercel/output/static"
+pages_build_output_dir = ".vercel/output/static"
 
 [vars]
 SKIP_DEPENDENCY_INSTALL=1

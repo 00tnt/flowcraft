@@ -14,19 +14,20 @@
     "deploy": "npm run pages:build && wrangler pages deploy"
   },
   "dependencies": {
-    "@tanstack/react-query": "^5.90.5",
+    "@cloudflare/next-on-pages": "^1.13.16",
     "@repo/ui": "workspace:*",
+    "@tanstack/react-query": "^5.90.5",
     "next": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
-    "@cloudflare/next-on-pages": "^1.13.16"
+    "wrangler": "^4.54.0"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^15.4.6",
-    "@tailwindcss/postcss": "catalog:",
     "@repo/eslint-config": "workspace:*",
     "@repo/tailwind-config": "workspace:*",
     "@repo/tsconfig": "workspace:*",
+    "@tailwindcss/postcss": "catalog:",
     "@types/node": "^22.15.30",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",

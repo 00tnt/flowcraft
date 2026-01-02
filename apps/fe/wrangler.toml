@@ -3,3 +3,5 @@ compatibility_date = "2026-01-02"
 compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = ".vercel/output/static"
 
+[vars]
+ECLOUDFLARE_API_TOKEN=aNOzHqZ47TuC7DBOPA47qM8VC7hVvOMFBDPZX39

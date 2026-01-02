@@ -1,7 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Check if .env file exists
+echo "📄 Checking for .env file..."
+
 if [ -f ".env" ]; then
+  echo "✅ .env file found"
+
+  echo "📄 Loading environment variables from .env file..."
   source .env
 fi
 
@@ -32,17 +38,6 @@ if [ ! -f ".gitmodules" ]; then
   exit 0
 fi
 echo "✅ .gitmodules file found"
-
-# Check if .env file exists
-echo "📄 Checking for .env file..."
-if [ ! -f ".env" ]; then
-  echo "❌ Error: .env file not found"
-  exit 1
-fi
-echo "✅ .env file found"
-
-echo "📄 Loading environment variables from .env file..."
-source .env
 
 echo "🔍 Validating GITHUB_ACCESS_TOKEN..."
 if [ -z "$GITHUB_ACCESS_TOKEN" ]; then

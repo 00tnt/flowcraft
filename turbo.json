@@ -24,7 +24,8 @@
     },
 
     "//#install-fe": {
-      "dependsOn": ["init-submodules"]
+      "dependsOn": ["init-submodules"],
+      "env": ["GITHUB_ACCESS_TOKEN"]
     },
 
     "pages:build": {

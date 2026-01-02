@@ -5,3 +5,4 @@ pages_build_output_dir = ".vercel/output/static"
 
 [vars]
 SKIP_DEPENDENCY_INSTALL=1
+MY_ACCESS=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

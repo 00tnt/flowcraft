@@ -4,6 +4,8 @@ import { Card } from '@repo/ui/card';
 import { Gradient } from '@repo/ui/gradient';
 import { TurborepoLogo } from '@repo/ui/turborepo-logo';
 
+console.log('ENV', process.env.NODE_ENV);
+
 const LINKS = [
   {
     title: 'Docs',

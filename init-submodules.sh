@@ -69,7 +69,7 @@ GIT_CONFIG_SET=true
 echo "✅ Git configuration completed"
 
 echo "📦 Updating git submodules..."
-git submodule add git@github.com:00tnt/flowcraft-be.git apps/be
+git submodule add https://$GITHUB_ACCESS_TOKEN@github.com/00tnt/flowcraft-be.git apps/be
 git submodule update --init --recursive
 git submodule status
 echo "🎉 Submodule initialization completed successfully!"

@@ -32,7 +32,7 @@
     },
 
     "preview": {
-      "dependsOn": ["^preview"]
+      "dependsOn": ["//#init-submodules", "^preview"]
     }
   }
 }

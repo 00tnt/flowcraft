@@ -1,10 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-if [ -f ".env" ]; then
-  source .env
-fi
-
 # Cleanup function to remove git credentials
 cleanup() {
   echo "🧹 Cleaning up git configuration..."
@@ -17,6 +13,22 @@ trap cleanup EXIT
 
 echo "🚀 Starting submodule initialization..."
 
+# Check if .gitmodules exists
+echo "📋 Checking for git submodules..."
+
+if [! -f ".gitmodules" ]; then
+  echo "⚠️  Warning: .gitmodules file not found - no submodules to initialize"
+  exit 0
+else
+  echo "✅ .gitmodules file found"
+  echo "Add content into .gitmodules file"
+  echo "[submodule \"apps/be\"]
+        path = apps/be
+        url = ../flowcraft-be.git" >.gitmodules
+  cat .gitmodules
+  echo "✅ Add content done"
+fi
+
 # Check if running in a git repository
 echo "🔍 Verifying git repository..."
 if ! git rev-parse --git-dir >/dev/null 2>&1; then
@@ -24,14 +36,6 @@ if ! git rev-parse --git-dir >/dev/null 2>&1; then
   exit 1
 fi
 echo "✅ Git repository verified"
-
-# Check if .gitmodules exists
-echo "📋 Checking for git submodules..."
-if [ ! -f ".gitmodules" ]; then
-  echo "⚠️  Warning: .gitmodules file not found - no submodules to initialize"
-  exit 0
-fi
-echo "✅ .gitmodules file found"
 
 # Check if .env file exists
 echo "📄 Checking for .env file..."

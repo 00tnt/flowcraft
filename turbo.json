@@ -28,7 +28,7 @@
     },
 
     "pages:build": {
-      "dependsOn": ["^pages:build"]
+      "dependsOn": ["//#init-submodules", "^pages:build"]
     },
 
     "preview": {

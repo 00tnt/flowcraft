@@ -16,10 +16,8 @@ echo "🚀 Starting submodule initialization..."
 # Check if .gitmodules exists
 echo "📋 Checking for git submodules..."
 
-if [! -f ".gitmodules" ]; then
-  echo "⚠️  Warning: .gitmodules file not found - no submodules to initialize"
-  exit 0
-else
+if [ ! -f ".gitmodules" ]; then
+  touch .gitmodules
   echo "✅ .gitmodules file found"
   echo "Add content into .gitmodules file"
   echo "[submodule \"apps/be\"]
@@ -27,6 +25,9 @@ else
         url = ../flowcraft-be.git" >.gitmodules
   cat .gitmodules
   echo "✅ Add content done"
+else
+  echo ".gitmodules exist with the content"
+  cat .gitmodules
 fi
 
 # Check if running in a git repository

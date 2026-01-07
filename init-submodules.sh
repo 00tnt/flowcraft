@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+echo $NODE_ENV
+
 # Cleanup function to remove git credentials
 cleanup() {
   echo "🧹 Cleaning up git configuration..."

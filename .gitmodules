@@ -1,3 +1,6 @@
 [submodule "apps/be"]
 	path = apps/be
 	url = ../flowcraft-be.git
+[submodule "flowcraft-be"]
+	path = flowcraft-be
+	url = git@github.com-personal:00tnt/flowcraft-be.git
